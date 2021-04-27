@@ -12,9 +12,21 @@ public class Javavariables {
 	  
 	  public void totalsalary(){
 		//Local variable  
-		  
+		 String strVal ="20000"; 
+		 int intTotalSal;
+		 //TypeCasting
+		 int intVal=Integer.parseInt(strVal);
+		 
+		 intTotalSal =intSal+intVal;
+		 System.out.println("Toal Salary :"+intTotalSal);
 	  }
-	   public void salarywithbouns(){
+	   public void salarywithbonus(){
+		   double floatBonus=1500.65;
+		   int intTotalSal;
+		   intTotalSal= (int) (intSal+floatBonus);
+		   
+		   System.out.println("Salary with Bonus is:"+intTotalSal);
+		     
 		   
 	   }
 	 
@@ -22,7 +34,8 @@ public class Javavariables {
 	public static void main(String[] args) {
 		Javavariables objJavavariables = new Javavariables();
 		objJavavariables.display();
-
+		objJavavariables.totalsalary();
+		objJavavariables.salarywithbonus();
 	}
 
 }
