@@ -14,7 +14,10 @@ public class Javavariables {
 		//Local variable  
 		  
 	  }
-	  
+	   public void salarywithbouns(){
+		   
+	   }
+	 
 
 	public static void main(String[] args) {
 		Javavariables objJavavariables = new Javavariables();
