@@ -6,11 +6,12 @@ public class WeekDays2 {
 
 	public static void main(String[] args) {
 		String strActualdays[]={"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
-        String strVal;
-    try (Scanner sc = new Scanner(System.in)) {
+		//String strExpectedDay[]={"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
+		String strVal;
+    Scanner sc = new Scanner(System.in);
         System.out.println("Enter Day:");
         strVal= sc.next();
-    }
+    
     OUTER:
     for (String strActualday : strActualdays) {
         if (strActualday == null ? strVal == null : strActualday.equals(strVal)) {

@@ -16,20 +16,20 @@ public class Weekdays {
 			if(strActualdays[intIndex].equals(strExpected)){
 			
 				
-				if(strExpected=="Mon"){
+				if(strExpected.equals("Mon")){
 					System.out.println("Week Started");
-				}else if(strExpected=="Tue"){
+				}else if(strExpected.equals("Tue")){
 					System.out.println("Work Started");
-				}else if(strExpected=="Wed"){
+				}else if(strExpected.equals("Wed")){
 					System.out.println("Work in progress");
-				}else if(strExpected=="Thu"){
+				}else if(strExpected.equals("Thu")){
 					System.out.println("Work Finished");
 					break;
-				}else if(strExpected=="Fri"){
+				}else if(strExpected.equals("Fri")){
 					System.out.println("Weekend");
-				}else if(strExpected=="Sat"){
+				}else if(strExpected.equals("Sat")){
 					System.out.println("Party");
-				}else if(strExpected=="Sun"){
+				}else if(strExpected.equals("Sun")){
 					System.out.println("Holiday");
 					continue;
 				}else{
