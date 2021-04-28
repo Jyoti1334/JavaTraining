@@ -5,77 +5,58 @@ import java.util.*;
 public class SwitchStatement {
 
 	public static void main(String[] args) {
-		Scanner calender = new Scanner(System.in);
-		
-		int intNo_of_Days  = 0; 
-        String strMonth_Name = "x";
-		
-        System.out.print("Input a month number: ");
-        int month = calender.nextInt();
+		Scanner sc = new Scanner(System.in);
+	
+        System.out.print("Input a month : ");
+        String strMonth;
+        strMonth= sc.next();
         
-        System.out.print("Input a year: ");
-        int year = calender.nextInt();
+        /*System.out.print("Input a year: ");
+        int year = calender.nextInt();*/
         
-        switch(month){
-           case 1:
-        	   strMonth_Name="January"; 
-        	   intNo_of_Days = 31;
+        switch(strMonth){
+           case "January":
+        	   System.out.println("This month has 31 days");
         	   break;
            
-           case 2:
-        	   strMonth_Name="February"; 
-        	   if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))){
-        		   intNo_of_Days= 29; 
-        	   }else{
-        		   intNo_of_Days=28;
-        	   }
+           case "February":
+        	   System.out.println("This month has 28  days or 29 days");
         	   break;
-           case 3:  
-        	   strMonth_Name="March"; 
-        	   intNo_of_Days = 31;
+           case "March":  
+        	   System.out.println("This month has 31 days");
         	   break;
-          case 4:  
-        	   strMonth_Name="April"; 
-        	   intNo_of_Days = 30;
+          case "April":  
+        	  System.out.println("This month has 30 days");
         	   break;   
-          case 5:  
-       	       strMonth_Name="May"; 
-       	       intNo_of_Days = 31;
+          case "May":  
+        	  System.out.println("This month has 31 days");
        	       break; 
-          case 6:  
-       	       strMonth_Name="June"; 
-       	       intNo_of_Days = 30;
+          case "June":  
+        	  System.out.println("This month has 30 days");
        	       break; 
-          case 7:  
-       	       strMonth_Name="July"; 
-       	       intNo_of_Days = 31;
+          case "July":  
+        	  System.out.println("This month has 31 days");
        	       break;  
-          case 8:  
-       	       strMonth_Name="August"; 
-       	       intNo_of_Days = 31;
+          case "August":  
+        	  System.out.println("This month has 31 days");
        	       break;  
-          case 9:  
-       	       strMonth_Name="September"; 
-       	       intNo_of_Days = 30;
+          case "September":  
+        	  System.out.println("This month has 30 days");
        	       break; 
-          case 10:  
-       	       strMonth_Name="October"; 
-       	       intNo_of_Days = 31;
+          case "October":  
+        	  System.out.println("This month has 31 days");
        	       break;  
-          case 11:  
-       	       strMonth_Name="November"; 
-       	       intNo_of_Days = 30;
+          case "November":  
+        	  System.out.println("This month has 30 days");
        	       break;  
-          case 12:  
-       	       strMonth_Name="December"; 
-       	       intNo_of_Days = 31;
+          case "December":  
+        	  System.out.println("This month has 31 days");
        	       break; 
        	  default:
        		  System.out.println("Invalid input ");
         }
 
-       System.out.println(strMonth_Name+ "  " +year + " have " +intNo_of_Days +" days \n" );
-
+      
 
 	}
 

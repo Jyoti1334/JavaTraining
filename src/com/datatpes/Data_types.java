@@ -5,7 +5,7 @@ public class Data_types {
 	  int intVal = 270;
 	  double doubleVal = 128.128;
 	  
-	public void CharClass(){
+	public void charClass(){
 	  
 	    char charFirst = 'A';
 	    char charSecond = 'B';
@@ -16,7 +16,7 @@ public class Data_types {
 	       System.out.println("The Incremented value of second alphabet: " +charSecond);
 	  }
 	
-	public void ByteDataType(){
+	public void byteDataType(){
 	 
 	    byte byte1 = 125;
 	    byte byte2 = -46;
@@ -27,7 +27,7 @@ public class Data_types {
 	       System.out.println("Incremented Value of byte2: " +byte2);
 	  }
   
-	public void IntDataType(){
+	public void intDataType(){
 	    int intNum1 = -7000;
 	    int intNum2 = 90000;
 	        System.out. println("\n IntDataType");
@@ -37,7 +37,7 @@ public class Data_types {
 		    System.out.println("Addition of two integers: " +result);
 	}
 	
-	public void Conversions(){
+	public void conversions(){
 		 System.out.println("\n DataType Conversions");
 		 byteVal = (byte) intVal;
 		 System.out.println("int converted to byte is: "+byteVal);
@@ -50,10 +50,10 @@ public class Data_types {
 	
 	public static void main(String[] args) {
 		Data_types objData_types= new Data_types();
-		objData_types.CharClass();
-		objData_types.ByteDataType();
-		objData_types.IntDataType();
-		objData_types.Conversions();
+		objData_types.charClass();
+		objData_types.byteDataType();
+		objData_types.intDataType();
+		objData_types.conversions();
 		
 	}
 
