@@ -1,48 +1,88 @@
 package com.array;
 
+
 import java.util.Scanner;
 
 public class Weekdays {
+	Scanner sc=new Scanner(System.in);
+    
+    String strActual[]={"monday","tuseday","wednesday","thursday","friday","saturday","sunday"};
+    
+    String strExpected[]={"monday","tuseday","wednesday","thursday","friday","saturday","sunday"};
+    
+    public int arrayValidation(){
+    
+        int flag=0;
+         
+         for(String strIndexActual:strActual){
+             for(String strIndexExpexted:strExpected){
+               if(strIndexActual.equals(strIndexExpexted)){
+                  flag = 1;  
+               
+               }else{
+                   flag=0;
+               }
+                   
+               }
+              }
+     return flag;
+    }
 
-	public static void main(String[] args) {
-		String strActualdays[]={"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter Day:");
-		String strExpected;
-		strExpected= sc.next();
-		
-		for(int intIndex=0;intIndex<strActualdays.length;intIndex++){
-			
-			if(strActualdays[intIndex].equals(strExpected)){
-			
-				
-				if(strExpected.equals("Mon")){
-					System.out.println("Week Started");
-				}else if(strExpected.equals("Tue")){
-					System.out.println("Work Started");
-				}else if(strExpected.equals("Wed")){
-					System.out.println("Work in progress");
-				}else if(strExpected.equals("Thu")){
-					System.out.println("Work Finished");
-					break;
-				}else if(strExpected.equals("Fri")){
-					System.out.println("Weekend");
-				}else if(strExpected.equals("Sat")){
-					System.out.println("Party");
-				}else if(strExpected.equals("Sun")){
-					System.out.println("Holiday");
-					continue;
-				}else{
-					System.out.println("invalid");
-				}
-			}
-		}
-		}
-	}
+ 
 
-		 
-		
+    public void displayWeekWork(){
 
+ 
+
+        System.out.println("enter the actual day :");
+        String strActualDay=sc.next();
+        
+        for(int intIndex=0;intIndex<strExpected.length;intIndex++){
+            
+            if(strExpected[intIndex].equals(strActualDay)){
+                if(strActualDay.equals("monday"))
+                    System.out.println("work started");
+                
+                else if(strActualDay.equals("tuseday"))
+                    System.out.println("work is in process..");
+                
+                else if(strActualDay.equals("wednesday"))
+                    System.out.println("work finish");
+                
+                else if(strActualDay.equals("thursday"))
+                    System.out.println("braek..");
+            
+                else if(strActualDay.equals("friday"))
+                    System.out.println("weekend day");
+                
+                else if(strActualDay.equals("saturday"))
+                    System.out.println("party day");
+            
+                else if(strActualDay.equals("sunday"))
+                    System.out.println("continue to next week");            
+            }
+            }
+        
+    }
+    
 	
+		     public static void main(String args[]){
+		        Weekdays objWeekdays=new Weekdays();
+		        
+		        int intChek=objWeekdays.arrayValidation(); 
+		        
+		        //System.out.println(intChek);
+		        if(intChek==1){
+		            
+		            System.out.println("Arrays are validated...");
+		            
+		            objWeekdays.displayWeekWork();
+		            
+		        }else{
+		            
+		            System.out.println("Arrays are not Validated we can not proceed further...");
+		        }
+		    }
+		}
 
 
