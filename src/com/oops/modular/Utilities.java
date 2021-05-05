@@ -3,52 +3,83 @@ package com.oops.modular;
 import java.util.Random;
 
 public class Utilities {
-	String strAlphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	
-	public String getRandomFirstName(int count){
-		StringBuilder builder = new StringBuilder();
-		while (count-- != 0) {
-		int character = (int)(Math.random()*strAlphabets.length());
-		builder.append(strAlphabets.charAt(character));
+	String strUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	String strLowercase = "abcdefghijklmnopqrstuvwxyz";
+//	String strNumber="0123456789";
+//	String strCode="99"+"98"+"97"+"91"+"90"+"77"+"78"+"75"+"80"+"96";
+//	
+	StringBuilder builder = new StringBuilder();
+	Random num=new Random();
+	/*to generate random string*/
+	public String getRandomString(int count){
+		
+		while (count-- != 0) 
+		{
+		int intCharacter = (int)(Math.random()*(strUppercase.concat(strLowercase)).length());
+		builder.append((strUppercase.concat(strLowercase)).charAt(intCharacter));
 		}
 		return builder.toString();
 		}
-	
-	
-	public String  getRandomSurname(int count){
 		
-		StringBuilder builder = new StringBuilder();
-		while (count-- != 0) {
-		int character = (int)(Math.random()*strAlphabets.length());
-		builder.append(strAlphabets.charAt(character));
-		}
-		return builder.toString();
-		}
-	
-	public int getRandomDate(int intRange){
-		int intRandomDate=(int)(Math.random()*31);
-		return intRandomDate;
+	/*to generate random number*/
+	public int getRandomNumber(int start, int end){
+		int intRandomNumber= start + (int) Math.round(Math.random() * (end - start));
+		return intRandomNumber;	
+	}
+	  
+    /*to generate random moblie no */
+    public String getRandomMobileNumber(){
+    	String strCode[]={"99","98","97","91","90","77","78","75","80","96"};
+    	
+    	String strRandom=(strCode[new Random().nextInt(strCode.length)]);
+    	int strDigit=(int)((Math.random()*90000000)+10000000);
+    	String strMobileNo=strRandom+Integer.toString(strDigit);
+    	return strMobileNo;
+    	
+    	
+    }
+    /*to generate random emailid */
+    public String getEmailID() {
+        String strAlphaNumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+      
+        
+        while (builder.length() < 10)
+        {
+            int index = (int) (num.nextFloat() * strAlphaNumeric.length());
+            builder.append(strAlphaNumeric.charAt(index));
+        }
+        String strEmailID = builder.toString();
+        return strEmailID;
+
+    }
+    
+    
+    
+    
+//	
+//	public int getRandomDigits(int length){
+//	    int strNum=(int)(Math.random()*strNumber.length());
+//		return strNum;
+//	}
+//	 public  String getMoblieCode(){
+//		 String strCode[]={"99","98","97","91","90","77","78","75","80","96"};
+//			
+//		 StringBuffer sb = new StringBuffer();
+//		 for(int i = 0; i < strCode.length; i++){
+//			 sb.append(strCode[i]);
+//		 }
+//		 String strVal = sb.toString();
+//		 
+//  		 return strVal;
+//			
+//	 }
+	//public  String getRandomMobileNo(int intRange){
 		
 	}
-	public int getRandomMonth(int intRange){
-		int intRandomMonth=(int)(Math.random()*12);
-		return intRandomMonth;
-		
-	}
-	public int getRandomYear(){
-	int intMax=2021;
-	int intMin=1900;
-	int intRandomYear=(int)(Math.random()*(intMax-intMin))+intMin;
-	return intRandomYear;		
-	}
-	public long getRandomMobileNo(){
-		long longMobileNumber=(long)(Math.random()*Math.pow(10, 10));
-		return longMobileNumber;
-	}
 	
 	
 	
 		
-	}
+	
 	
 	

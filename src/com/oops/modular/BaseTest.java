@@ -1,6 +1,6 @@
 package com.oops.modular;
 
-public class BaseClass {
+public class BaseTest {
 	//initialze Browser
 	public void initializeBrowser(String strBrowser){
 		System.out.println("Browser  initialized is  : "+strBrowser);

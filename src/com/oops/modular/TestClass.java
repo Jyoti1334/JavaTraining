@@ -1,6 +1,6 @@
 package com.oops.modular;
 
-public class TestClass extends BaseClass {
+public class TestClass extends BaseTest {
 
 	public static void main(String[] args) {
 		TestClass objTestClass =new TestClass();
@@ -8,7 +8,12 @@ public class TestClass extends BaseClass {
 		objTestClass.openUrl("https://www.facebook.com/");
 		
 	FacebookPageobject objFacebookPageobject=new FacebookPageobject();
-	objFacebookPageobject.doSignUp_1("Pass@123");	
+	//objFacebookPageobject.doSignUp("raj", "kumar", 266552, "215213",1, "MAy", 2021, "male");
+	objFacebookPageobject.doSignUpwithMobileNo("Pass@123","male");	
+	
+	System.out.println("=====================================================");
+	
+	objFacebookPageobject.doSignUpwithEmail("Admin@123", "female");
 	objTestClass.closeBrowser();
 //		
 //	Utilities objUtilities=new Utilities();
