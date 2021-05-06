@@ -8,22 +8,25 @@ public class TestClass extends BaseTest {
 		objTestClass.openUrl("https://www.facebook.com/");
 		
 	FacebookPageobject objFacebookPageobject=new FacebookPageobject();
-	//objFacebookPageobject.doSignUp("raj", "kumar", 266552, "215213",1, "MAy", 2021, "male");
-	objFacebookPageobject.doSignUpwithMobileNo("Pass@123","male");	
+	
+	objFacebookPageobject.doSignUp(objFacebookPageobject.getRandomString(2),
+			                       objFacebookPageobject.getRandomString(4),
+			                       objFacebookPageobject.getRandomMobileNumber(),"Pass@123",
+			                       objFacebookPageobject.getRandomNumber(1, 31),
+			                       objFacebookPageobject.getRandomNumber(1, 12),
+			                       objFacebookPageobject.getRandomNumber(1990, 2000), "male");
 	
 	System.out.println("=====================================================");
 	
-	objFacebookPageobject.doSignUpwithEmail("Admin@123", "female");
+   objFacebookPageobject.doSignUp_1(objFacebookPageobject.getRandomString(4), 
+		                            objFacebookPageobject.getRandomString(6),
+		                            objFacebookPageobject.getEmailID()+"@gmail.com", "Admin@12",
+		                            objFacebookPageobject.getRandomNumber(1, 31), 
+		                            objFacebookPageobject.getRandomNumber(1, 12), 
+		                            objFacebookPageobject.getRandomNumber(2000, 2021), 
+		                            "female");;
 	objTestClass.closeBrowser();
-//		
-//	Utilities objUtilities=new Utilities();
-//	System.out.println("FirstName :"+objUtilities.getRandomFirstName(10));
-//	System.out.println("Surname :"+objUtilities.getRandomSurname(10));
-//	System.out.println("Date: "+objUtilities.getRandomDate(31));
-//	System.out.println("Month: "+objUtilities.getRandomMonth(12));
-//	System.out.println("Year : "+objUtilities.getRandomYear());
-//	System.out.println("Moblie Number "+objUtilities.getRandomMobileNo());
-//	
+
 	}
 
 }

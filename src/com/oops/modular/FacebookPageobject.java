@@ -25,10 +25,12 @@ public class FacebookPageobject extends Utilities {
 		System.out.println("Enter Surname :"+strSurname);
 	}
 	
-	public void enterMobileNo(int intMobileNo){
-		System.out.println("Enter Mobile Number : "+intMobileNo);
+	public void enterMobileNo(String strMobileNo){
+		System.out.println("Enter Mobile Number : "+strMobileNo);
 	}
-	
+	public void enterEmailID(String strEmailID){
+		System.out.println("Enter Email Id : "+strEmailID);
+	}
     public void enterNewPassword(String strPassword){
     	System.out.println("Enter New Password :"+strPassword);
     }
@@ -37,8 +39,8 @@ public class FacebookPageobject extends Utilities {
     	System.out.println("Select Date from Date Dropdown :"+intDate);
     }
     
-    public void selectMonth(String strMonth){
-    	System.out.println("Select Month from Month Dropdown :"+strMonth);
+    public void selectMonth(int intMonth){
+    	System.out.println("Select Month from Month Dropdown :"+intMonth);
     }
     
     public void selectYear(int intYear){
@@ -72,8 +74,8 @@ public class FacebookPageobject extends Utilities {
     public void verifySignUp(){
     	System.out.println("Welcome page is displayed");
     }
-    
-    public void doSignUp(String strFirstname, String strSurname, int intMobileNo, String strPassword, int intDate, String strMonth, int intYear, String strGender2){
+    /*SignUp with Mobile No*/
+    public void doSignUp(String strFirstname, String strSurname, String strMobileNo, String strPassword, int intDate, int intMonth, int intYear, String strGender2){
     	//Step 1. enter FirstName
     	this.enterFirstName(strFirstname);
     	
@@ -81,7 +83,7 @@ public class FacebookPageobject extends Utilities {
     	this.enterSurname(strSurname);
     	
     	//step 3. enter mobile number
-    	this.enterMobileNo(intMobileNo);
+    	this.enterMobileNo(strMobileNo);
     	
     	//step 4.enter new password
     	this.enterNewPassword(strPassword);
@@ -90,7 +92,7 @@ public class FacebookPageobject extends Utilities {
     	this.selectDate(intDate);
     	
     	//step 6. enter month
-    	this.selectMonth(strMonth);
+    	this.selectMonth(intMonth);
     	
     	//step 7. enter year
     	this.selectYear(intYear);
@@ -106,35 +108,28 @@ public class FacebookPageobject extends Utilities {
     	
     	
     }
-    /*SignUp with Mobile No*/
-    public void doSignUpwithMobileNo(String strPassword, String strGender2){
-    	//Step 1. enter FirstName
-    	this.getRandomString(2);
-    	System.out.println("FirstName :"+getRandomString(2));
+    /*SignUp with Email Id*/
+    public void doSignUp_1(String strFirstname, String strSurname, String strEmailID, String strPassword, int intDate, int intMonth, int intYear, String strGender2){
+    		//Step 1. enter FirstName
+    	this.enterFirstName(strFirstname);
     	
     	//step 2. enter surname
-    	this.getRandomString(4);
-    	System.out.println("Surname :"+getRandomString(4));
+    	this.enterSurname(strSurname);
     	
     	//step 3. enter mobile number
-    	this.getRandomMobileNumber();
-    	System.out.println("Mobile number :"+getRandomMobileNumber());
-   	
+    	this.enterEmailID(strEmailID);;
     	
     	//step 4.enter new password
     	this.enterNewPassword(strPassword);
     	
     	//step 5.enter date
-    	this.getRandomNumber(1, 31);
-    	System.out.println("Date :"+getRandomNumber(1, 31));
+    	this.selectDate(intDate);
     	
-    	////step 6. enter month
-    	this.getRandomNumber(1, 12);
-    	System.out.println("Month :"+getRandomNumber(1, 12));
+    	//step 6. enter month
+    	this.selectMonth(intMonth);
     	
     	//step 7. enter year
-    	this.getRandomNumber(1990, 2000);
-    	System.out.println("Year :"+getRandomNumber(1990, 2000));
+    	this.selectYear(intYear);
     	
     	//step 8. select gender
     	this.selectGender(strGender2);
@@ -146,51 +141,8 @@ public class FacebookPageobject extends Utilities {
     	this.verifySignUp();
     	
     	
-    	
-    
     }
-	/*to SignUp with email ID*/
-    public void doSignUpwithEmail(String strPassword, String strGender2){
-    	//Step 1. enter FirstName
-    	this.getRandomString(2);
-    	System.out.println("FirstName :"+getRandomString(2));
-    	
-    	//step 2. enter surname
-    	this.getRandomString(4);
-    	System.out.println("Surname :"+getRandomString(4));
-    	
-    	//step 3. Enter emailID
-    	this.getEmailID();
-    	System.out.println("Email Id: "+getEmailID()+"@gmail.com");
-    	
-    	//step 4.enter new password
-    	this.enterNewPassword(strPassword);
-    	
-    	//step 5.enter date
-    	this.getRandomNumber(1, 31);
-    	System.out.println("Date :"+getRandomNumber(1, 31));
-    	
-    	////step 6. enter month
-    	this.getRandomNumber(1, 12);
-    	System.out.println("Month :"+getRandomNumber(1, 12));
-    	
-    	//step 7. enter year
-    	this.getRandomNumber(1990, 2000);
-    	System.out.println("Year :"+getRandomNumber(1990, 2000));
-    	
-    	//step 8. select gender
-    	this.selectGender(strGender2);
-    	
-    	//step 9. click on signup button
-    	this.clickSignUp();
-    	
-    	//step 10. verify signup
-    	this.verifySignUp();
-    	
-    	
-    	
     
-    }
 	
 
 }
