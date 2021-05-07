@@ -15,8 +15,8 @@ public class BaseTest extends Utilities {
 	public Hashtable<String,String> getObjHashTable() {
   	  objHashTable.put("FirstName",this.getRandomString(2));
   	  objHashTable.put("Surname",this. getRandomString(4));
- 	  objHashTable.put("Moblie No",this. getRandomMobileNumber());
- 	  objHashTable.put("Email Id",this.getRandomEmailId());
+ 	  objHashTable.put("MoblieNo",this. getRandomMobileNumber());
+ 	  objHashTable.put("EmailId",this.getRandomEmailId());
  	  objHashTable.put("Password", "Admin@123");
   	  objHashTable.put("Date", this.getRandomNumber(1, 31));
  	  objHashTable.put("Month",this. getRandomNumber(1,12));

@@ -33,7 +33,7 @@ public class TestClass extends BaseTest {
    System.out.println("=================HashTable for Facebook SignUp with Mobile No===============================");
    objFacebookPageobject.doSignUp(objTestClass.getObjHashTable().get("FirstName"),
 		                          objTestClass.getObjHashTable().get("Surname"),
-		                          objTestClass.getObjHashTable().get("Moblie No"),
+		                          objTestClass.getObjHashTable().get("MoblieNo"),
 		                          objTestClass.getObjHashTable().get("Password"),
 		                          objTestClass.getObjHashTable().get("Date"),
 		                          objTestClass.getObjHashTable().get("Month"),
