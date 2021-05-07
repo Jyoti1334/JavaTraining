@@ -22,9 +22,9 @@ public class Utilities {
 		}
 		
 	/*to generate random number*/
-	public int getRandomNumber(int start, int end){
+	public String getRandomNumber(int start, int end){
 		int intRandomNumber= start + (int) Math.round(Math.random() * (end - start));
-		return intRandomNumber;	
+		return Integer.toString(intRandomNumber);	
 	}
 	  
     /*to generate random moblie no */
@@ -39,19 +39,14 @@ public class Utilities {
     	
     }
     /*to generate random emailid */
-    public String getEmailID() {
-        String strAlphaNumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-      
-        
-        while (builder.length() < 10)
-        {
-            int index = (int) (num.nextFloat() * strAlphaNumeric.length());
-            builder.append(strAlphaNumeric.charAt(index));
-        }
-        String strEmailID = builder.toString();
-        return strEmailID;
-
+    public String getRandomEmailId() {
+        // TODO Auto-generated method stub
+        return getRandomString(4) + getRandomNumber(0, 9) + "@gmail.com";
     }
+    
+    
+   
+  
     
     
     

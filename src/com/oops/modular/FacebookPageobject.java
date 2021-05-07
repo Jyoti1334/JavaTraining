@@ -35,16 +35,16 @@ public class FacebookPageobject extends Utilities {
     	System.out.println("Enter New Password :"+strPassword);
     }
     
-    public void selectDate(int intDate){
-    	System.out.println("Select Date from Date Dropdown :"+intDate);
+    public void selectDate(String strDate){
+    	System.out.println("Select Date from Date Dropdown :"+strDate);
     }
     
-    public void selectMonth(int intMonth){
-    	System.out.println("Select Month from Month Dropdown :"+intMonth);
+    public void selectMonth(String strMonth){
+    	System.out.println("Select Month from Month Dropdown :"+strMonth);
     }
     
-    public void selectYear(int intYear){
-    	System.out.println("Select year from Year Dropdown : "+intYear);
+    public void selectYear(String strYear){
+    	System.out.println("Select year from Year Dropdown : "+strYear);
     }
     
     public void selectGender(String strGender2){
@@ -75,7 +75,7 @@ public class FacebookPageobject extends Utilities {
     	System.out.println("Welcome page is displayed");
     }
     /*SignUp with Mobile No*/
-    public void doSignUp(String strFirstname, String strSurname, String strMobileNo, String strPassword, int intDate, int intMonth, int intYear, String strGender2){
+    public void doSignUp(String strFirstname, String strSurname, String strMobileNo, String strPassword, String strDate, String strMonth, String strYear, String strGender2){
     	//Step 1. enter FirstName
     	this.enterFirstName(strFirstname);
     	
@@ -89,13 +89,13 @@ public class FacebookPageobject extends Utilities {
     	this.enterNewPassword(strPassword);
     	
     	//step 5.enter date
-    	this.selectDate(intDate);
+    	this.selectDate(strDate);
     	
     	//step 6. enter month
-    	this.selectMonth(intMonth);
+    	this.selectMonth(strMonth);
     	
     	//step 7. enter year
-    	this.selectYear(intYear);
+    	this.selectYear(strYear);
     	
     	//step 8. select gender
     	this.selectGender(strGender2);
@@ -109,7 +109,7 @@ public class FacebookPageobject extends Utilities {
     	
     }
     /*SignUp with Email Id*/
-    public void doSignUp_1(String strFirstname, String strSurname, String strEmailID, String strPassword, int intDate, int intMonth, int intYear, String strGender2){
+    public void doSignUpwithEmailId(String strFirstname, String strSurname, String strEmailID, String strPassword, String strDate, String strMonth, String strYear, String strGender2){
     		//Step 1. enter FirstName
     	this.enterFirstName(strFirstname);
     	
@@ -123,13 +123,13 @@ public class FacebookPageobject extends Utilities {
     	this.enterNewPassword(strPassword);
     	
     	//step 5.enter date
-    	this.selectDate(intDate);
+    	this.selectDate(strDate);
     	
     	//step 6. enter month
-    	this.selectMonth(intMonth);
+    	this.selectMonth(strMonth);
     	
     	//step 7. enter year
-    	this.selectYear(intYear);
+    	this.selectYear(strYear);
     	
     	//step 8. select gender
     	this.selectGender(strGender2);
